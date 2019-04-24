@@ -1,4 +1,6 @@
-/*task 01*/
+/**
+ * task 01
+ * */
 function Box(h,w,dep) {
     this.Height = h;
     this.Width = w;
@@ -32,7 +34,9 @@ createDiv(
     'box volume = ' + box.volume()
 );
 
-/*task 02*/
+/**
+ * task 02
+ * */
 function Cats(name, color, age, gender) {
     this.Name = name;
     this.Color = color;
@@ -65,5 +69,30 @@ createDiv(
     'Task 02. Third cat',
     cat3.sayMeow(),
     ''
+);
+
+/**
+ * task 03
+ * */
+let arr = [10,32,40,14,56,27];
+let humanArr = [];
+function Human(age) {
+    this.Age = age;
+}
+
+for (let i = 0; i < arr.length; i++) {
+    let human = new Human(arr[i]);
+    humanArr.push(human);
+    function compareNumbers(a, b) {
+        return a.Age - b.Age;
+    }
+    humanArr.sort(compareNumbers).reverse();
+}
+
+createDiv(
+    'first third',
+    'Task 03',
+    'Origin array with numbers: ' + arr,
+    'Human sorted ages: ' + JSON.stringify(humanArr)
 );
 
