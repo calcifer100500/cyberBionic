@@ -96,3 +96,41 @@ createDiv(
     'Human sorted ages: ' + JSON.stringify(humanArr)
 );
 
+/**
+ * task 04
+ * */
+
+function Humanity(name, age, gender, race, language) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.race = race;
+    this.language = language;
+
+    this.sayHi = function() {
+        return 'Hi! My name is ' + this.name + '. ' + 'I am ' + this.age + '. ' + 'I am a ' + this.gender + '. ' + 'I am ' + this.race + '. ' + 'I speak ' + this.language + '. '
+    }
+}
+
+let human1 = new Humanity('Jessica', 18, 'female', 'european', 'english');
+let human2 = new Humanity('Li', 29, 'male', 'asian', 'chinese');
+let human3 = new Humanity('Oliver', 35, 'male', 'european', 'german');
+
+createDiv(
+    'second',
+    'Task 04. First human',
+    human1.sayHi(),
+    ''
+);
+createDiv(
+    'second',
+    'Task 04. Second human',
+    human2.sayHi(),
+    ''
+);
+createDiv(
+    'second',
+    'Task 04. Third human',
+    human3.sayHi(),
+    ''
+);
